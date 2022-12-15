@@ -6,7 +6,7 @@ def get_calorie_array():
 
     array = []
 
-    file = open("day-1.txt", "r")
+    file = open("input-1.txt", "r")
 
     for row in file:
         if row == '\n':
@@ -19,8 +19,10 @@ def get_calorie_array():
                 calories = calories + int(row)
         if calories > max:
             max = calories
-
+            
+    file.close()
     return sorted(array)
+    
 
 array = get_calorie_array()
 
